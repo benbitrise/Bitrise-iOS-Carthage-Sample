@@ -56,6 +56,10 @@ workflows:
         - scheme: "$BITRISE_SCHEME"
     - deploy-to-bitrise-io@1: {}
     - cache-push@2: {}
+    - build-router-start@0:
+        inputs:
+        - workflows: primary
+        - access_token: $BEN_TOKEN
 app:
   envs:
   - opts:
